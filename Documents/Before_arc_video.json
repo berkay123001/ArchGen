@@ -1,0 +1,275 @@
+{
+  "title": "Video Streaming Platform (Netflix Clone)",
+  "description": "Enterprise-scale video streaming platform with 10M+ users",
+  "nodes": [
+    {
+      "id": "web_client",
+      "label": "Web Application",
+      "type": "CLIENT",
+      "description": "React-based streaming interface",
+      "technologies": ["React", "Next.js", "TypeScript"]
+    },
+    {
+      "id": "mobile_ios",
+      "label": "iOS App",
+      "type": "MOBILE",
+      "description": "Native iOS streaming app",
+      "technologies": ["Swift", "AVPlayer"]
+    },
+    {
+      "id": "mobile_android",
+      "label": "Android App",
+      "type": "MOBILE",
+      "description": "Native Android streaming app",
+      "technologies": ["Kotlin", "ExoPlayer"]
+    },
+    {
+      "id": "smart_tv",
+      "label": "Smart TV Apps",
+      "type": "CLIENT",
+      "description": "Apps for smart TVs and streaming devices",
+      "technologies": ["React Native for TV", "WebOS"]
+    },
+    {
+      "id": "cdn",
+      "label": "CDN",
+      "type": "CDN",
+      "description": "Global content delivery network",
+      "technologies": ["Cloudflare", "AWS CloudFront"]
+    },
+    {
+      "id": "load_balancer",
+      "label": "Load Balancer",
+      "type": "LOAD_BALANCER",
+      "description": "Distributes traffic across regions",
+      "technologies": ["AWS ALB", "Nginx"]
+    },
+    {
+      "id": "api_gateway",
+      "label": "API Gateway",
+      "type": "API_GATEWAY",
+      "description": "GraphQL and REST APIs",
+      "technologies": ["Apollo Server", "Express"]
+    },
+    {
+      "id": "auth_service",
+      "label": "Authentication Service",
+      "type": "MICROSERVICE",
+      "description": "User authentication and profiles",
+      "technologies": ["Node.js", "JWT", "OAuth2"]
+    },
+    {
+      "id": "catalog_service",
+      "label": "Content Catalog Service",
+      "type": "MICROSERVICE",
+      "description": "Movies, series, metadata management",
+      "technologies": ["Java Spring Boot", "Elasticsearch"]
+    },
+    {
+      "id": "streaming_service",
+      "label": "Video Streaming Service",
+      "type": "MICROSERVICE",
+      "description": "Adaptive bitrate streaming (HLS/DASH)",
+      "technologies": ["Go", "FFmpeg"]
+    },
+    {
+      "id": "recommendation_service",
+      "label": "Recommendation Engine",
+      "type": "MICROSERVICE",
+      "description": "ML-powered content recommendations",
+      "technologies": ["Python", "TensorFlow", "Scikit-learn"]
+    },
+    {
+      "id": "payment_service",
+      "label": "Payment Service",
+      "type": "MICROSERVICE",
+      "description": "Subscription billing",
+      "technologies": ["Node.js", "Stripe"]
+    },
+    {
+      "id": "analytics_service",
+      "label": "Analytics Service",
+      "type": "MICROSERVICE",
+      "description": "User behavior analytics",
+      "technologies": ["Python", "Spark"]
+    },
+    {
+      "id": "encoding_service",
+      "label": "Video Encoding Service",
+      "type": "MICROSERVICE",
+      "description": "Transcodes videos to multiple formats",
+      "technologies": ["FFmpeg", "AWS MediaConvert"]
+    },
+    {
+      "id": "search_service",
+      "label": "Search Service",
+      "type": "MICROSERVICE",
+      "description": "Full-text content search",
+      "technologies": ["Elasticsearch"]
+    },
+    {
+      "id": "postgres",
+      "label": "PostgreSQL",
+      "type": "DATABASE",
+      "description": "User accounts and subscriptions",
+      "technologies": ["PostgreSQL", "Patroni"]
+    },
+    {
+      "id": "redis",
+      "label": "Redis Cache",
+      "type": "CACHE",
+      "description": "Session and content caching",
+      "technologies": ["Redis Cluster"]
+    },
+    {
+      "id": "mongodb",
+      "label": "MongoDB",
+      "type": "DATABASE",
+      "description": "Content metadata and viewing history",
+      "technologies": ["MongoDB"]
+    },
+    {
+      "id": "s3",
+      "label": "Object Storage (S3)",
+      "type": "STORAGE",
+      "description": "Video files and thumbnails",
+      "technologies": ["AWS S3", "MinIO"]
+    },
+    {
+      "id": "kafka",
+      "label": "Kafka",
+      "type": "QUEUE",
+      "description": "Event streaming platform",
+      "technologies": ["Apache Kafka"]
+    },
+    {
+      "id": "elasticsearch",
+      "label": "Elasticsearch",
+      "type": "DATABASE",
+      "description": "Content search and analytics",
+      "technologies": ["Elasticsearch"]
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "web_client",
+      "target": "cdn",
+      "label": "Static Assets"
+    },
+    {
+      "id": "e2",
+      "source": "mobile_ios",
+      "target": "cdn",
+      "label": "Video Streaming"
+    },
+    {
+      "id": "e3",
+      "source": "mobile_android",
+      "target": "cdn",
+      "label": "Video Streaming"
+    },
+    {
+      "id": "e4",
+      "source": "smart_tv",
+      "target": "cdn",
+      "label": "Video Streaming"
+    },
+    {
+      "id": "e5",
+      "source": "cdn",
+      "target": "load_balancer",
+      "label": "API Requests"
+    },
+    {
+      "id": "e6",
+      "source": "load_balancer",
+      "target": "api_gateway",
+      "label": "Distributed Traffic"
+    },
+    {
+      "id": "e7",
+      "source": "api_gateway",
+      "target": "auth_service",
+      "label": "Authentication"
+    },
+    {
+      "id": "e8",
+      "source": "api_gateway",
+      "target": "catalog_service",
+      "label": "Browse Content"
+    },
+    {
+      "id": "e9",
+      "source": "api_gateway",
+      "target": "streaming_service",
+      "label": "Stream Request"
+    },
+    {
+      "id": "e10",
+      "source": "api_gateway",
+      "target": "recommendation_service",
+      "label": "Get Recommendations"
+    },
+    {
+      "id": "e11",
+      "source": "api_gateway",
+      "target": "search_service",
+      "label": "Search Query"
+    },
+    {
+      "id": "e12",
+      "source": "streaming_service",
+      "target": "s3",
+      "label": "Fetch Video Segments"
+    },
+    {
+      "id": "e13",
+      "source": "catalog_service",
+      "target": "mongodb",
+      "label": "Content Metadata"
+    },
+    {
+      "id": "e14",
+      "source": "catalog_service",
+      "target": "elasticsearch",
+      "label": "Search Index"
+    },
+    {
+      "id": "e15",
+      "source": "auth_service",
+      "target": "postgres",
+      "label": "User Data"
+    },
+    {
+      "id": "e16",
+      "source": "auth_service",
+      "target": "redis",
+      "label": "Session Cache"
+    },
+    {
+      "id": "e17",
+      "source": "recommendation_service",
+      "target": "mongodb",
+      "label": "Viewing History"
+    },
+    {
+      "id": "e18",
+      "source": "recommendation_service",
+      "target": "kafka",
+      "label": "User Events"
+    },
+    {
+      "id": "e19",
+      "source": "analytics_service",
+      "target": "kafka",
+      "label": "Analytics Events"
+    },
+    {
+      "id": "e20",
+      "source": "encoding_service",
+      "target": "s3",
+      "label": "Store Encoded Videos"
+    }
+  ]
+}

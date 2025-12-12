@@ -1,0 +1,490 @@
+{
+  "nodes": [
+    {
+      "id": "web_client",
+      "label": "Web Application",
+      "type": "CLIENT",
+      "description": "React-based streaming interface with Redux state management",
+      "technologies": [
+        "React",
+        "Next.js",
+        "TypeScript"
+      ]
+    },
+    {
+      "id": "mobile_ios",
+      "label": "iOS App",
+      "type": "MOBILE",
+      "description": "Native iOS streaming app with offline support",
+      "technologies": [
+        "Swift",
+        "AVPlayer"
+      ]
+    },
+    {
+      "id": "mobile_android",
+      "label": "Android App",
+      "type": "MOBILE",
+      "description": "Native Android streaming app with offline support",
+      "technologies": [
+        "Kotlin",
+        "ExoPlayer"
+      ]
+    },
+    {
+      "id": "smart_tv",
+      "label": "Smart TV Apps",
+      "type": "CLIENT",
+      "description": "Apps for smart TVs and streaming devices",
+      "technologies": [
+        "React Native for TV",
+        "WebOS"
+      ]
+    },
+    {
+      "id": "admin_portal",
+      "label": "Admin Portal",
+      "type": "CLIENT",
+      "description": "Internal dashboard for content upload and analytics",
+      "technologies": [
+        "React",
+        "Refine"
+      ]
+    },
+    {
+      "id": "cdn",
+      "label": "Global CDN",
+      "type": "CDN",
+      "description": "Content delivery network with Signed URL validation",
+      "technologies": [
+        "Cloudflare",
+        "AWS CloudFront"
+      ]
+    },
+    {
+      "id": "load_balancer",
+      "label": "Load Balancer",
+      "type": "LOAD_BALANCER",
+      "description": "Multi-AZ Application Load Balancer",
+      "technologies": [
+        "AWS ALB",
+        "Nginx"
+      ]
+    },
+    {
+      "id": "api_gateway",
+      "label": "Federated API Gateway",
+      "type": "API_GATEWAY",
+      "description": "Apollo Federation Gateway for subgraph routing",
+      "technologies": [
+        "Apollo Gateway",
+        "Express"
+      ]
+    },
+    {
+      "id": "auth_service",
+      "label": "Authentication Service",
+      "type": "MICROSERVICE",
+      "description": "Identity provider, MFA, and session management",
+      "technologies": [
+        "Node.js",
+        "Passport.js",
+        "OAuth2"
+      ]
+    },
+    {
+      "id": "payment_service",
+      "label": "Payment Service",
+      "type": "MICROSERVICE",
+      "description": "Subscription lifecycle and payment processing",
+      "technologies": [
+        "Node.js",
+        "Stripe SDK"
+      ]
+    },
+    {
+      "id": "content_upload_service",
+      "label": "Content Upload Service",
+      "type": "MICROSERVICE",
+      "description": "Handles raw video ingestion from admins",
+      "technologies": [
+        "Go",
+        "AWS SDK"
+      ]
+    },
+    {
+      "id": "encoding_service",
+      "label": "Video Encoding Service",
+      "type": "MICROSERVICE",
+      "description": "Transcodes raw video to HLS/DASH profiles",
+      "technologies": [
+        "FFmpeg",
+        "AWS MediaConvert"
+      ]
+    },
+    {
+      "id": "catalog_service",
+      "label": "Catalog Service",
+      "type": "MICROSERVICE",
+      "description": "Content metadata management",
+      "technologies": [
+        "Java Spring Boot"
+      ]
+    },
+    {
+      "id": "streaming_service",
+      "label": "Streaming Control Service",
+      "type": "MICROSERVICE",
+      "description": "Generates Signed URLs and DRM tokens",
+      "technologies": [
+        "Go",
+        "JWT"
+      ]
+    },
+    {
+      "id": "drm_service",
+      "label": "DRM Provider",
+      "type": "MICROSERVICE",
+      "description": "Issues Widevine/FairPlay licenses",
+      "technologies": [
+        "EzDRM",
+        "PallyCon"
+      ]
+    },
+    {
+      "id": "recommendation_service",
+      "label": "Recommendation Engine",
+      "type": "MICROSERVICE",
+      "description": "Personalized content ranking",
+      "technologies": [
+        "Python",
+        "TensorFlow"
+      ]
+    },
+    {
+      "id": "search_service",
+      "label": "Search Indexer",
+      "type": "MICROSERVICE",
+      "description": "Consumes changes to update search indices",
+      "technologies": [
+        "Java",
+        "Kafka Streams"
+      ]
+    },
+    {
+      "id": "analytics_service",
+      "label": "Analytics Service",
+      "type": "MICROSERVICE",
+      "description": "Aggregates user QoS and behavior events",
+      "technologies": [
+        "Python",
+        "Flink"
+      ]
+    },
+    {
+      "id": "notification_service",
+      "label": "Notification Service",
+      "type": "MICROSERVICE",
+      "description": "Sends emails and push notifications",
+      "technologies": [
+        "Node.js",
+        "AWS SES"
+      ]
+    },
+    {
+      "id": "kafka",
+      "label": "Event Bus (Kafka)",
+      "type": "QUEUE",
+      "description": "Central nervous system for async events",
+      "technologies": [
+        "Apache Kafka",
+        "Schema Registry"
+      ]
+    },
+    {
+      "id": "postgres",
+      "label": "Primary DB (PostgreSQL)",
+      "type": "DATABASE",
+      "description": "Transactional data for Users and Payments",
+      "technologies": [
+        "PostgreSQL",
+        "Patroni HA"
+      ]
+    },
+    {
+      "id": "mongodb",
+      "label": "Metadata DB (MongoDB)",
+      "type": "DATABASE",
+      "description": "Content catalog and user profiles",
+      "technologies": [
+        "MongoDB Atlas"
+      ]
+    },
+    {
+      "id": "redis",
+      "label": "Redis Cluster",
+      "type": "CACHE",
+      "description": "Distributed cache for sessions and API responses",
+      "technologies": [
+        "Redis"
+      ]
+    },
+    {
+      "id": "s3_raw",
+      "label": "Raw Storage (S3)",
+      "type": "STORAGE",
+      "description": "Staging area for uploaded raw footage",
+      "technologies": [
+        "AWS S3"
+      ]
+    },
+    {
+      "id": "s3_public",
+      "label": "Public Storage (S3)",
+      "type": "STORAGE",
+      "description": "Optimized/Transcoded video segments",
+      "technologies": [
+        "AWS S3"
+      ]
+    },
+    {
+      "id": "elasticsearch",
+      "label": "Search Index",
+      "type": "DATABASE",
+      "description": "Full-text search engine",
+      "technologies": [
+        "Elasticsearch"
+      ]
+    },
+    {
+      "id": "data_lake",
+      "label": "Data Lake",
+      "type": "STORAGE",
+      "description": "Long-term storage for analytics",
+      "technologies": [
+        "Snowflake",
+        "Parquet"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_client_cdn",
+      "source": "web_client",
+      "target": "cdn",
+      "label": "Fetch Video Segments"
+    },
+    {
+      "id": "e_ios_cdn",
+      "source": "mobile_ios",
+      "target": "cdn",
+      "label": "Fetch Video Segments"
+    },
+    {
+      "id": "e_android_cdn",
+      "source": "mobile_android",
+      "target": "cdn",
+      "label": "Fetch Video Segments"
+    },
+    {
+      "id": "e_tv_cdn",
+      "source": "smart_tv",
+      "target": "cdn",
+      "label": "Fetch Video Segments"
+    },
+    {
+      "id": "e_cdn_origin",
+      "source": "cdn",
+      "target": "s3_public",
+      "label": "Origin Pull (Authenticated)"
+    },
+    {
+      "id": "e_client_lb",
+      "source": "web_client",
+      "target": "load_balancer",
+      "label": "API Requests"
+    },
+    {
+      "id": "e_ios_lb",
+      "source": "mobile_ios",
+      "target": "load_balancer",
+      "label": "API Requests"
+    },
+    {
+      "id": "e_android_lb",
+      "source": "mobile_android",
+      "target": "load_balancer",
+      "label": "API Requests"
+    },
+    {
+      "id": "e_tv_lb",
+      "source": "smart_tv",
+      "target": "load_balancer",
+      "label": "API Requests"
+    },
+    {
+      "id": "e_admin_lb",
+      "source": "admin_portal",
+      "target": "load_balancer",
+      "label": "Content Management"
+    },
+    {
+      "id": "e_lb_gw",
+      "source": "load_balancer",
+      "target": "api_gateway",
+      "label": "Traffic Distribution"
+    },
+    {
+      "id": "e_gw_auth",
+      "source": "api_gateway",
+      "target": "auth_service",
+      "label": "Auth Routes"
+    },
+    {
+      "id": "e_gw_pay",
+      "source": "api_gateway",
+      "target": "payment_service",
+      "label": "Checkout/Billing"
+    },
+    {
+      "id": "e_gw_catalog",
+      "source": "api_gateway",
+      "target": "catalog_service",
+      "label": "Browse Content"
+    },
+    {
+      "id": "e_gw_stream",
+      "source": "api_gateway",
+      "target": "streaming_service",
+      "label": "Get Stream Token"
+    },
+    {
+      "id": "e_gw_recs",
+      "source": "api_gateway",
+      "target": "recommendation_service",
+      "label": "Get Recs"
+    },
+    {
+      "id": "e_gw_search",
+      "source": "api_gateway",
+      "target": "elasticsearch",
+      "label": "Search Queries (Read-Only)"
+    },
+    {
+      "id": "e_gw_upload",
+      "source": "api_gateway",
+      "target": "content_upload_service",
+      "label": "Upload Video"
+    },
+    {
+      "id": "e_auth_db",
+      "source": "auth_service",
+      "target": "postgres",
+      "label": "User Credentials"
+    },
+    {
+      "id": "e_auth_cache",
+      "source": "auth_service",
+      "target": "redis",
+      "label": "Session Cache"
+    },
+    {
+      "id": "e_pay_db",
+      "source": "payment_service",
+      "target": "postgres",
+      "label": "Store Tx/Subscription"
+    },
+    {
+      "id": "e_pay_event",
+      "source": "payment_service",
+      "target": "kafka",
+      "label": "Payment Succeeded"
+    },
+    {
+      "id": "e_upload_s3",
+      "source": "content_upload_service",
+      "target": "s3_raw",
+      "label": "Store Raw Video"
+    },
+    {
+      "id": "e_upload_event",
+      "source": "content_upload_service",
+      "target": "kafka",
+      "label": "Upload Completed"
+    },
+    {
+      "id": "e_kafka_encoding",
+      "source": "kafka",
+      "target": "encoding_service",
+      "label": "Trigger Transcoding"
+    },
+    {
+      "id": "e_encode_raw",
+      "source": "encoding_service",
+      "target": "s3_raw",
+      "label": "Read Source"
+    },
+    {
+      "id": "e_encode_pub",
+      "source": "encoding_service",
+      "target": "s3_public",
+      "label": "Write HLS/DASH"
+    },
+    {
+      "id": "e_stream_drm",
+      "source": "streaming_service",
+      "target": "drm_service",
+      "label": "Generate License"
+    },
+    {
+      "id": "e_catalog_db",
+      "source": "catalog_service",
+      "target": "mongodb",
+      "label": "Content Metadata"
+    },
+    {
+      "id": "e_catalog_event",
+      "source": "catalog_service",
+      "target": "kafka",
+      "label": "Metadata Updated (CDC)"
+    },
+    {
+      "id": "e_kafka_search",
+      "source": "kafka",
+      "target": "search_service",
+      "label": "Update Index"
+    },
+    {
+      "id": "e_search_idx",
+      "source": "search_service",
+      "target": "elasticsearch",
+      "label": "Write Index"
+    },
+    {
+      "id": "e_recs_db",
+      "source": "recommendation_service",
+      "target": "mongodb",
+      "label": "Read History"
+    },
+    {
+      "id": "e_analytics_kafka",
+      "source": "analytics_service",
+      "target": "kafka",
+      "label": "User Events"
+    },
+    {
+      "id": "e_kafka_lake",
+      "source": "kafka",
+      "target": "data_lake",
+      "label": "Archive Data"
+    },
+    {
+      "id": "e_kafka_notify",
+      "source": "kafka",
+      "target": "notification_service",
+      "label": "Send Receipts/Alerts"
+    }
+  ],
+  "title": "Optimized Video Streaming Platform (Netflix Clone)",
+  "description": "Refactored Enterprise-scale video streaming architecture. fixes orphan nodes (Payment), establishes a proper encoding pipeline, implements DRM, and uses Kafka for robust event-driven data propagation to analytics and search indices."
+}

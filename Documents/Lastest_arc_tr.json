@@ -1,0 +1,435 @@
+{
+  "nodes": [
+    {
+      "id": "client_web",
+      "label": "Web Uygulaması (React)",
+      "type": "CLIENT",
+      "description": "Son kullanıcılar için Progressive Web App (PWA).",
+      "technologies": [
+        "React",
+        "Next.js",
+        "TypeScript"
+      ]
+    },
+    {
+      "id": "client_ios",
+      "label": "iOS Uygulaması",
+      "type": "MOBILE",
+      "description": "Apple cihazlar için native mobil uygulama.",
+      "technologies": [
+        "Swift",
+        "SwiftUI"
+      ]
+    },
+    {
+      "id": "client_android",
+      "label": "Android Uygulaması",
+      "type": "MOBILE",
+      "description": "Android cihazlar için native mobil uygulama.",
+      "technologies": [
+        "Kotlin",
+        "Jetpack Compose"
+      ]
+    },
+    {
+      "id": "cdn",
+      "label": "İçerik Dağıtım Ağı (CDN)",
+      "type": "CDN",
+      "description": "Statik varlıkları (resim, video, JS/CSS) önbelleğe alır.",
+      "technologies": [
+        "Cloudflare",
+        "Akamai"
+      ]
+    },
+    {
+      "id": "waf",
+      "label": "Web Uygulama Güvenlik Duvarı (WAF)",
+      "type": "LOAD_BALANCER",
+      "description": "DDoS koruması ve güvenlik filtrelemesi sağlar.",
+      "technologies": [
+        "AWS WAF"
+      ]
+    },
+    {
+      "id": "lb_global",
+      "label": "Küresel Yük Dengeleyici",
+      "type": "LOAD_BALANCER",
+      "description": "Trafiği uygun bölgelere ve servislere dağıtır.",
+      "technologies": [
+        "Nginx",
+        "HAProxy"
+      ]
+    },
+    {
+      "id": "api_gateway",
+      "label": "API Ağ Geçidi (GraphQL Federation)",
+      "type": "API_GATEWAY",
+      "description": "Tüm mikroservisler için tek giriş noktası ve şema birleştirici.",
+      "technologies": [
+        "Apollo Federation",
+        "GraphQL"
+      ]
+    },
+    {
+      "id": "service_auth",
+      "label": "Kimlik Doğrulama Servisi",
+      "type": "MICROSERVICE",
+      "description": "JWT yönetimi, OAuth2 ve SSO işlemlerini yönetir.",
+      "technologies": [
+        "Go",
+        "OAuth2"
+      ]
+    },
+    {
+      "id": "service_user",
+      "label": "Kullanıcı Profili Servisi",
+      "type": "MICROSERVICE",
+      "description": "Kullanıcı bilgileri ve tercihlerini yönetir.",
+      "technologies": [
+        "Node.js",
+        "gRPC"
+      ]
+    },
+    {
+      "id": "service_product",
+      "label": "Ürün ve Stok Servisi",
+      "type": "MICROSERVICE",
+      "description": "Ürün kataloğu ve envanter yönetimi.",
+      "technologies": [
+        "Java",
+        "Spring Boot"
+      ]
+    },
+    {
+      "id": "service_order",
+      "label": "Sipariş Yönetim Servisi",
+      "type": "MICROSERVICE",
+      "description": "Sepet ve sipariş yaşam döngüsü yönetimi.",
+      "technologies": [
+        "Java",
+        "Spring Boot"
+      ]
+    },
+    {
+      "id": "payment_service",
+      "label": "Ödeme Servisi",
+      "type": "MICROSERVICE",
+      "description": "Ödeme işlemlerini güvenli bir şekilde işler ve bankalarla iletişim kurar.",
+      "technologies": [
+        "Go",
+        "PCI-DSS"
+      ]
+    },
+    {
+      "id": "service_search",
+      "label": "Arama Servisi",
+      "type": "MICROSERVICE",
+      "description": "Gelişmiş tam metin arama ve filtreleme.",
+      "technologies": [
+        "Python",
+        "FastAPI"
+      ]
+    },
+    {
+      "id": "service_notification",
+      "label": "Bildirim Servisi",
+      "type": "MICROSERVICE",
+      "description": "E-posta, SMS ve Push bildirimlerini yönetir.",
+      "technologies": [
+        "Node.js"
+      ]
+    },
+    {
+      "id": "db_auth",
+      "label": "Kimlik Veritabanı (Postgres)",
+      "type": "DATABASE",
+      "description": "Kullanıcı kimlik bilgileri için ilişkisel veritabanı.",
+      "technologies": [
+        "PostgreSQL"
+      ]
+    },
+    {
+      "id": "db_user",
+      "label": "Kullanıcı Veritabanı (NoSQL)",
+      "type": "DATABASE",
+      "description": "Kullanıcı profilleri için belge tabanlı veritabanı.",
+      "technologies": [
+        "MongoDB"
+      ]
+    },
+    {
+      "id": "db_product_write",
+      "label": "Ürün Veritabanı (Yazma - Master)",
+      "type": "DATABASE",
+      "description": "Ürün verileri için ana yazma veritabanı.",
+      "technologies": [
+        "PostgreSQL"
+      ]
+    },
+    {
+      "id": "db_product_read",
+      "label": "Ürün Veritabanı (Okuma - Replica)",
+      "type": "DATABASE",
+      "description": "Yüksek okuma performansı için salt okunur kopyalar.",
+      "technologies": [
+        "PostgreSQL"
+      ]
+    },
+    {
+      "id": "cache_redis",
+      "label": "Redis Ön Bellek Kümesi",
+      "type": "CACHE",
+      "description": "Sık erişilen veriler ve oturum yönetimi için önbellek.",
+      "technologies": [
+        "Redis Cluster"
+      ]
+    },
+    {
+      "id": "es_search",
+      "label": "Elasticsearch Kümesi",
+      "type": "DATABASE",
+      "description": "Arama indeksleri için dağıtık arama motoru.",
+      "technologies": [
+        "Elasticsearch"
+      ]
+    },
+    {
+      "id": "kafka_cluster",
+      "label": "Kafka Olay Yolu",
+      "type": "QUEUE",
+      "description": "Servisler arası asenkron iletişim için mesaj kuyruğu.",
+      "technologies": [
+        "Apache Kafka"
+      ]
+    },
+    {
+      "id": "worker_fraud",
+      "label": "Sahtecilik Tespit İşçisi",
+      "type": "WORKER",
+      "description": "Siparişleri analiz ederek dolandırıcılığı tespit eder.",
+      "technologies": [
+        "Python",
+        "TensorFlow"
+      ]
+    },
+    {
+      "id": "worker_email",
+      "label": "E-posta İşçisi",
+      "type": "WORKER",
+      "description": "Kuyruktan gelen bildirim görevlerini işler.",
+      "technologies": [
+        "Go"
+      ]
+    },
+    {
+      "id": "ext_bank",
+      "label": "Banka/Ödeme API",
+      "type": "EXTERNAL",
+      "description": "3. parti ödeme sağlayıcısı.",
+      "technologies": [
+        "Stripe/Adyen"
+      ]
+    },
+    {
+      "id": "ext_sms",
+      "label": "SMS Sağlayıcısı",
+      "type": "EXTERNAL",
+      "description": "3. parti SMS gateway.",
+      "technologies": [
+        "Twilio"
+      ]
+    },
+    {
+      "id": "data_lake",
+      "label": "Veri Gölü (Data Lake)",
+      "type": "STORAGE",
+      "description": "Tüm ham verilerin toplandığı analitik depolama alanı.",
+      "technologies": [
+        "AWS S3",
+        "Snowflake"
+      ]
+    },
+    {
+      "id": "service_analytics",
+      "label": "Analitik Servisi",
+      "type": "MICROSERVICE",
+      "description": "İş zekası ve raporlama servisi.",
+      "technologies": [
+        "Spark",
+        "Python"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "client_web",
+      "target": "cdn",
+      "label": "HTTPS"
+    },
+    {
+      "id": "e2",
+      "source": "client_ios",
+      "target": "cdn",
+      "label": "HTTPS"
+    },
+    {
+      "id": "e3",
+      "source": "client_android",
+      "target": "cdn",
+      "label": "HTTPS"
+    },
+    {
+      "id": "e4",
+      "source": "cdn",
+      "target": "waf",
+      "label": "Filtrelenmiş Trafik"
+    },
+    {
+      "id": "e5",
+      "source": "waf",
+      "target": "lb_global",
+      "label": "Güvenli İstekler"
+    },
+    {
+      "id": "e6",
+      "source": "lb_global",
+      "target": "api_gateway",
+      "label": "Yük Dengeleme"
+    },
+    {
+      "id": "e7",
+      "source": "api_gateway",
+      "target": "service_auth",
+      "label": "gRPC / Auth"
+    },
+    {
+      "id": "e8",
+      "source": "api_gateway",
+      "target": "service_user",
+      "label": "gRPC / User"
+    },
+    {
+      "id": "e9",
+      "source": "api_gateway",
+      "target": "service_product",
+      "label": "gRPC / Product"
+    },
+    {
+      "id": "e10",
+      "source": "api_gateway",
+      "target": "service_order",
+      "label": "gRPC / Order"
+    },
+    {
+      "id": "e11",
+      "source": "api_gateway",
+      "target": "service_search",
+      "label": "gRPC / Search"
+    },
+    {
+      "id": "e_fix_payment",
+      "source": "api_gateway",
+      "target": "payment_service",
+      "label": "Ödeme Başlatma"
+    },
+    {
+      "id": "e12",
+      "source": "service_auth",
+      "target": "db_auth",
+      "label": "SQL Okuma/Yazma"
+    },
+    {
+      "id": "e13",
+      "source": "service_user",
+      "target": "db_user",
+      "label": "NoSQL Okuma/Yazma"
+    },
+    {
+      "id": "e14",
+      "source": "service_product",
+      "target": "cache_redis",
+      "label": "Önbellekleme"
+    },
+    {
+      "id": "e15",
+      "source": "service_product",
+      "target": "db_product_write",
+      "label": "Yazma"
+    },
+    {
+      "id": "e16",
+      "source": "service_product",
+      "target": "db_product_read",
+      "label": "Okuma"
+    },
+    {
+      "id": "e17",
+      "source": "db_product_write",
+      "target": "db_product_read",
+      "label": "Replikasyon"
+    },
+    {
+      "id": "e18",
+      "source": "service_search",
+      "target": "es_search",
+      "label": "Sorgulama"
+    },
+    {
+      "id": "e19",
+      "source": "service_order",
+      "target": "kafka_cluster",
+      "label": "Sipariş Oluşturuldu Olayı"
+    },
+    {
+      "id": "e20",
+      "source": "payment_service",
+      "target": "ext_bank",
+      "label": "API Çağrısı"
+    },
+    {
+      "id": "e21",
+      "source": "payment_service",
+      "target": "kafka_cluster",
+      "label": "Ödeme Başarılı Olayı"
+    },
+    {
+      "id": "e22",
+      "source": "kafka_cluster",
+      "target": "worker_fraud",
+      "label": "Olay Tüketimi"
+    },
+    {
+      "id": "e23",
+      "source": "kafka_cluster",
+      "target": "worker_email",
+      "label": "Bildirim Tetikleme"
+    },
+    {
+      "id": "e24",
+      "source": "worker_email",
+      "target": "service_notification",
+      "label": "Gönderim İsteği"
+    },
+    {
+      "id": "e25",
+      "source": "service_notification",
+      "target": "ext_sms",
+      "label": "SMS Gönderimi"
+    },
+    {
+      "id": "e26",
+      "source": "kafka_cluster",
+      "target": "data_lake",
+      "label": "Veri Aktarımı"
+    },
+    {
+      "id": "e27",
+      "source": "service_analytics",
+      "target": "data_lake",
+      "label": "Büyük Veri Analizi"
+    }
+  ],
+  "title": "FAANG Ölçeğinde Dağıtık E-Ticaret Platformu",
+  "description": "Yüksek oranda ölçeklenebilir, hataya dayanıklı, olay güdümlü mikroservis mimarisi."
+}
