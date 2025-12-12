@@ -1,0 +1,5 @@
+{
+  "name": "ArchGen AI - System Architect Simulator",
+  "description": "An AI-powered software architecture visualizer and simulator. It generates interactive system design diagrams from text prompts, simulates data flow, provides architectural critiques using thinking models, and suggests modern tech stacks using Google Search grounding.",
+  "requestFramePermissions": []
+}
